@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<main class="p-5">
+<div class="row">
+	<div class="col-sm-6 offset-sm-3">
+	<h1>confirm ?</h1>
+		<hr>
+		<form enctype="multipart/form-data" method="post">
+		{% csrf_token %}
+		{{form | crispy}}
+			<input class="btn btn-danger my-3" type="submit" placeholder="Yes">
+			<button type="submit" href="/social/mypost" class="btn btn-outline-success">No</button>
+
+		</form>
+	
+	</div>
+</div>
+</main>
+{% endblock %}

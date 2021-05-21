@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+
+<h1>Contact Us </h1>
+
+<div class="row">
+	<div class="col-sm-6">
+	<form>
+	<input class="form-control" type="text" name="uname" placeholder="Name:" /><br>
+	<input class="form-control" type="email" name="email" placeholder="Email:" /><br>
+	<textarea class="form-control"  placeholder="Message:"></textarea><br>
+	<button class="btn btn-dark btn-block" type="submit">Submit</button>
+	</form>
+	</div>
+	<div class="col-sm-6">
+      <h3>Address:</h3> MIT  Satara Village Road, Beed Bypass Rd, Disha Nagari, Aurangabad, Maharashtra 431010
+      <br> <br> <br>
+      <h3>Email Us:</h3> cse@mit.asia
+
+	</div>
+</div>
+<div class="row my-5">
+<div class="col-sm-8 offset-sm-2">
+<div class="embed-responsive embed-responsive-16by9">
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

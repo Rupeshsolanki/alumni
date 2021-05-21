@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<main class="p-5 container">
+<div class="row text-justify">
+	<div class="col">
+	<h1 class="myhead2">Register Page</h1>
+	<hr>
+	</div>
+</div>
+<div class="container">
+<form enctype="multipart/form-data" method="post" class="col-sm-5">
+{% csrf_token %}
+{{form | crispy}}<br>
+<button type="submit" class="btn btn-outline-info" font-family:"Comic Sans MS", cursive, sans-serif>Register</button>
+
+</form>
+	</div>
+</main>
+{% endblock %}

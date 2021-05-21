@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5">
+<h1>Members </h1>
+<hr>
+<form class="form-inline">
+<input class="form-control mr-3" placeholder="Search" value="{{ request.GET.si }}" type="text" name="si" />
+<input class="btn btn-dark mr-3" type="submit" value="Search" />
+</form>
+
+<table class="table my-3">
+    <thead class="bg-dark text-light">
+        <tr>
+            <th>Name</th>
+
+            <th>Action</th>
+        </tr>
+    </thead>
+{% for n1 in myprofile_list %}
+        <tr>
+            <td><b> <h2 style="color:black;font-size:20px;">{{n1.name}}</h2></b></td>
+
+            <td>
+            <a class="btn btn-outline-secondary btn-sm" href='/social/myprofile/{{n1.id}}'><b>Read More</b></a>
+            {% if n1.followed %}
+            <a class="btn btn-outline-danger btn-sm" href='/social/myprofile/unfollow/{{n1.id}}'><b>Unfollow</b></a>
+            {% else %}
+            <a class="btn  btn-outline-primary btn-sm" href='/social/myprofile/follow/{{n1.id}}'><b>Follow</b></a>
+            {% endif %}
+            </td>
+        </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}
