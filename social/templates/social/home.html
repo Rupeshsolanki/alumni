@@ -16,7 +16,7 @@
     <img class="card-img-top" src="/media/{{n1.pic}}" alt="">
     <div class="card-body">
         <h4 class="card-title"  <h2 style="color:black;font-size:50px;">{{n1.subject}}</h4>
-        <p class="card-text"  <h2 style="color:blue;font-size:50px;">{{n1.cr_date | date:"d/m/y"}} - {{n1.uploaded_by}}
+        <p class="card-text"  <h6 style="color:blue;font-size:50px;">{{n1.cr_date | date:"d/m/y"}} - {{n1.uploaded_by}}
         {% if n1.uploaded_by.pic %}
 		<img style="width: 50px; height: 50px;" class="img-fluid rounded-circle" src="/media/{{n1.uploaded_by.pic}}" />
 		{% endif %}
